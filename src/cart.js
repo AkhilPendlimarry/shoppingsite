@@ -3,7 +3,7 @@ import CartContext from "./cartContext";
 
 function Cart() {
     const { cartItems } = useContext(CartContext);
-    console.log('cart item logged')
+
     return (
         <div>
             <h2>Cart</h2>
