@@ -1,0 +1,27 @@
+import { BrowserRouter,Route, Routes } from "react-router-dom";
+import AllProducts from "./AllProducts";
+import Header from "./Header";
+import { CartProvider } from "./cartContext";
+import Cart from "./cart";
+
+
+function App() {
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <CartProvider>
+            <Header/>
+            <Routes>
+              <Route path="/Cart" element={<Cart />} />
+              <Route path="/AllProducts" element={<AllProducts />} />
+            </Routes>
+        </CartProvider>
+      </BrowserRouter>
+      
+      
+      
+    </div>
+  );
+}
+
+export default App;
