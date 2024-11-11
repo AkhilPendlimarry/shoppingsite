@@ -34,11 +34,10 @@ export default function AllProducts(){
     return (
       <>
       <h2>Welcome to Products Section</h2>
-           <div className='products'>
-                
+           <div className='products'>                
                 {product.map((item)=>(
-                <div key={item.id} >
-                  <img src={item.image} alt={item.name} />
+                <div className="productCard" key={item.id} >
+                  <img className="productImage" src={item.image} alt={item.name} />
                   <h3>{item.name}</h3>
                   <p>{item.description}</p>
                   <h4>Price: ${item.price}</h4>
