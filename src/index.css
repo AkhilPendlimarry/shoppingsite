@@ -23,7 +23,7 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(247, 233, 182);
+  background-color: rgb(247, 159, 159);
   flex-wrap: wrap;
   gap: 20px;
   margin: 15px;
@@ -31,12 +31,12 @@ code {
 
 }
 
-button{
+.products button{
   padding: 10px;
   font-size: 22px;
   border: none;
   border-radius: 5px;
-  background-color: chocolate;
+  background-color: rgb(189, 249, 27);
   color: black;
   cursor: pointer;
 }
