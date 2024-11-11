@@ -13,7 +13,7 @@ function Cart() {
                 <ul>
                     {cartItems.map((item, index) => (
                         <li key={index}>
-                            {item.name} - ${item.price}
+                            {item.id} - {item.name} -{item.description}- ${item.price}
                         </li>
                     ))}
                 </ul>

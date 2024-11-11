@@ -23,11 +23,24 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(203, 203, 198);
+  background-color: rgb(247, 233, 182);
   flex-wrap: wrap;
   gap: 20px;
   margin: 15px;
   padding: 10px;
-  
-  
+
+}
+
+button{
+  padding: 10px;
+  font-size: 22px;
+  border: none;
+  border-radius: 5px;
+  background-color: chocolate;
+  color: black;
+  cursor: pointer;
+}
+
+h2{
+  margin: 20px;
 }
