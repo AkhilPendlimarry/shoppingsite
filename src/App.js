@@ -8,10 +8,11 @@ import Cart from "./cart";
 function App() {
   return (
     <div className="App">
-      <h1>Akhil</h1>
+
       <BrowserRouter>
         <CartProvider>
-            <Header/>
+            <Header/> 
+            
             <Routes>
               <Route path="/cart" element={<Cart />} />
               <Route path="/AllProducts" element={<AllProducts />} />

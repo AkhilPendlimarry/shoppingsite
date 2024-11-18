@@ -1,10 +1,17 @@
-import React, { createContext, useState} from "react";
+import React, { createContext, useState, useEffect} from "react";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({children})=> {
-    const [cartItems, setCartItems] = useState([]);
+    const [cartItems, setCartItems] = useState(()=>{
+        const saveToLocalStorage = localStorage.getItem("cartItems");
+        return saveToLocalStorage ? JSON.parse(saveToLocalStorage):[]; // retrieve saved items if any from the local storage on initial load and keeps empty array if no items found.
+    });
+    console.log(cartItems)
     
+    useEffect(()=>{
+        localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }, [cartItems]); // updates teh storage when the state changes.
     const addToCart=(product) => {
         setCartItems((prevItems)=> {
             const existingItem = prevItems.find(item=> item.id === product.id);

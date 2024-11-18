@@ -68,3 +68,49 @@ h2{
   align-items: center;
   gap: 20px;
 }
+
+.controls{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  
+  
+}
+span{
+  color: rgb(127, 242, 12);
+}
+
+.cartContainer{
+  margin: 20px;
+  padding: 10px;
+  max-width: 800px;
+}
+.cartTable{
+  width: 100vw;
+  margin: 10px;
+}
+
+.cartTable th,
+.cartTable td{
+  border: 1px solid white;
+  padding: 10px;
+}
+.cartBtn{
+  border: 1px solid black;
+  margin: 10px;
+  
+}
+
+.cartSummary{
+  
+  margin-top: 10px;
+
+}
+
+.discountBtn{
+  background-color: rgb(95, 252, 11);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+}
