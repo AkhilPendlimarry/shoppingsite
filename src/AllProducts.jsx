@@ -30,7 +30,12 @@ export default function AllProducts(){
 
 
     const [product, setProduct] = useState(products);
-    const {addToCart} = useContext(CartContext);
+    const {addToCart,increment, decrement, cartItems} = useContext(CartContext);
+    const getCartItem = (id)=> {
+      const cartItem = cartItems.find((item) => item.id===id);
+      return cartItem ? cartItem.quantity: 0;
+    }
+
     return (
       <>
       <h2>Welcome to Products Section</h2>
@@ -41,7 +46,18 @@ export default function AllProducts(){
                   <h3>{item.name}</h3>
                   <p>{item.description}</p>
                   <h4>Price: ${item.price}</h4>
-                  <button onClick={()=>addToCart(item)}>Add to Cart</button>
+                  <div className="productDetails">
+                    {getCartItem(item.id)> 0 ? (
+                      <div className="controls">
+                        <button onClick={()=>decrement(item.id)}> - </button>
+                        <span>{getCartItem(item.id)}</span>
+                        <button onClick={()=>increment(item.id)}> + </button>
+                      </div> ): 
+                       ( <button onClick={()=>addToCart(item)}>Add to Cart</button>)
+                      }
+                  
+                  </div>
+                 
                 </div>
               ))}
             </div>
